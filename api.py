@@ -9,10 +9,6 @@ app = Flask(__name__)
 
 app.secret_key = "hello"
 
-@app.route("/")
-def home():
-    return render_template("index.html")
-
 app.config["EXCEL_UPLOADS"] = "./static/assets/uploads"
 app.config["ALLOWED_EXCEL_EXTENSIONS"] = ["XLSX", "CSV", "XLS"]
 
@@ -76,7 +72,7 @@ def allowed_excel(filename):
     else:
         return False
 
-@app.route("/tool", methods=["GET", "POST"])
+@app.route("/")
 def tool():
     session.pop("result", None)
     session.pop("model", None)
@@ -106,6 +102,7 @@ def tool():
         if "result" in session:
             return redirect(url_for("pop"))
     return render_template("tool.html")
+
 
 
 @app.route("/result", methods=["GET", "POST"])

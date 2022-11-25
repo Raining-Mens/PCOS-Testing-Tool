@@ -1,0 +1,151 @@
+.login {
+  overflow: hidden;
+  outline-color:#fd8a94;
+  outline-style: inset;
+  outline-width: thick;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70%;
+  width: 800px;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+}
+
+.login::before, .login::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+}
+
+.login > input {
+  font-family: "Asap", sans-serif;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  margin: 15px -10px;
+}
+
+.login > button {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  font-family: "Asap", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  border: 10px;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: #f45b69;
+  transition: background-color 300ms;
+}
+
+.login > button:hover {
+  background-color: #f24353;
+}
+
+.rectangle {
+  height: 200px;
+  width: 740px;
+  margin-bottom: 50px;
+  background-color: #555;
+}
+
+.bar1 {
+  border-left: 4px solid #f45b69;
+  height: 180px;
+  position: absolute;
+  bottom: 20px;
+  left: 250px;
+  margin-top: 370px;
+  margin-left: -5px;
+  top: -80px;
+}
+
+.bar2 {
+  border-left: 4px solid #f45b69;
+  height: 180px;
+  position: absolute;
+  bottom: 20px;
+  left: 600px;
+  margin-top: 370px;
+  margin-left: -5px;
+  top: -80px;
+}
+
+.login > h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 59%;
+  left: 10px;
+}
+
+.diagnosis {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 70%;
+  left: 10px;
+}
+
+.model {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 90%;
+  left: 120px;
+}
+
+.login > h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 90%;
+  left: 10px;
+}
+
+.login > h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 86.8px;
+  width: 25%;
+  height: 25%;
+  text-align: left;
+  line-height: 1.5;
+  position: absolute;
+  top: 56.8%;
+  right: 44%;
+}
+
+.results {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 86.8px;
+  width: 20%;
+  text-align: left;
+  line-height: 1,5;
+  position: absolute;
+  top: 56.8%;
+  right: 20%;
+}
+

@@ -1,0 +1,15 @@
+Cycle(R/I):4
+FSH(mIU/mL):2
+LH(mIU/mL):1.51
+AMH(ng/mL):7.94
+Pulse rate(bpm):72
+PRG(ng/mL):0.3
+RBS(mg/dl):125
+BP _Systolic (mmHg):120
+BP _Diastolic (mmHg):80
+Avg. F size (L) (mm):20
+Avg. F size (R) (mm):21
+Endometrium (mm):8
+Age (yrs):25
+hair growth(Y/N):1
+Skin darkening (Y/N):1

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}PCOS Tool{% endblock %}
+    
+</head>
+
+<body>
+    {% block content %}
+    <!-- Tool -->
+    <form action="/tool" method="POST" enctype="multipart/form-data">
+        <div class="container-main row">
+            <div class="container-io col m-2">
+                <div class="file-loading">
+                    <!-- <form action="/tool" method="POST" enctype="multipart/form-data"> -->
+                        <div class="tool-input">
+                            <input type="file" id="input" name="input"
+                                accept=".csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                                onClick="preview(input)">
+                            <!-- <input type="file" id="excel" name="excel"> -->
+
+                        </div>
+                        <!-- <button type="submit" class="start">Start</button> -->
+                    <!-- </form> -->
+                </div>
+                <div class="tool-output">
+                    <div class="tbl-prev">
+                        <table id="tbl-data"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="container-cont col m-2">
+                <p>PCOS<br>DIAGNOSING<br>TOOL</p>
+                <div class="container-btn">
+                    <label class="control-svm">
+                        SVM<br>
+                        <input type="radio" name="radio" value="SVM"/> 
+                    </label>
+                    <label class="control-dt">
+                        DT<br>
+                        <input type="radio" name="radio" value="DT"/>
+                    </label>
+                </div>
+                <button class="start" type="submit" href="{{ url_for('result')}}">Start</button>
+            </div>    
+        </div>
+    </form>
+    {% endblock %}
+</body>
+
+</html>

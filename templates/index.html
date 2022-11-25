@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}PCOS Home{% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <!-- LANDING -->
+    <main id="home">
+        <div class="container-fluid">
+            <div class="row-2">
+                <button class="howBtn" id="myBtn">?</button>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="{{ url_for('static', filename='assets/ovary.jpg') }}" class="img-fluid" alt="ovary img" />
+                </div>
+                <div class="col p-5">
+                   
+                    <h1>PCOS<br>DIAGNOSING<br>TOOL</h1>
+                    <p>This tool will diagnose if the patient is infected with Polycystic Ovary Syndrome by examining
+                        physical and clinical assessment of the patient using the machine learning models SVM and
+                        Decision Tree</p>
+                    <a class="btn btn-lightred btn-lg fw-bolder" href="{{ url_for('tool')}}" role="button">START</a>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>HOW TO GUIDE</h1>
+                    <p>1. Download or follow the Input Data Excel Template. <a href="/static/assets/PCOS_without_infertility_normalized.xlsx" download>Download</a></p>
+                    <p>2. Upload the excel file to upload box.</p>
+                    <p>3. Select which model to use. It's either Support Vector Machine  (SVM) or Decision Tree (DT).</p>
+                    <p>4. Click start to begin evaluation.</p>
+
+                    <hr style="height: 5px; color: #ff0800;">
+
+                    <p>It will then show the contents of the file.</p>
+                    <p1>Placeholder</p1>
+
+                    <hr style="height: 5px; color: #ff0800;">
+                    
+                    <div class="modal-row">
+                        <div class="modal-col1">
+                            <p>After the evaluation, it will show the results on bottom whether it is INFECTED or NOTINFECTED.<br>Along with the details of which model has been used and some details about the patient's data.</p>
+                        </div>
+                        <div class="modal-col2">
+                            <img src="{{ url_for('static', filename='assets/placeholder.png') }}" class="img-fluid" alt="placeholder img" />
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <script>
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+                
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+    </main>
+    {% endblock %}
+   
+
+</body>
+
+</html>

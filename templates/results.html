@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}PCOS Results{% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <form class="login">
+        <div class="rectangle"></div>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <button href="{{ url_for('tool') }}">Back</button>
+        <h3>DIAGNOSIS:</h3>
+        <div class="diagnosis">
+            <h1 style="font-size:50px">{{RESULTS}}</h1>
+        </div>
+        <div class="model">
+            <h4>{{MODEL}}</h4>
+        </div>
+        <h4>MODEL:</h4>
+
+        <h5>Patient ID: </h5><span>{{ID}}</span><br>
+        <h5>Age: </h5><span>{{AGE}}</span><br>
+        <h5>Hairgrowth: </h5><span>{{HAIR}}</span><br>
+        <h5>Cycle(R/I): </h5><span>{{CYC}}</span><br>
+        <h5>Avg. Follicle Size (L): </h5><span>{{AFL}}</span><br>
+        <h5>Avg. Follicle Size (R): </h5><span>{{AFR}}</span>
+
+    </form>
+    {% endblock %}
+</body>
+
+</html>

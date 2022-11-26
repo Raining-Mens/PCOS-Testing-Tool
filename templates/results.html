@@ -8,7 +8,10 @@
 
 <body>
     {% block content %}
-    <form class="login">
+    <p>Accuracy: {{ACC}}</p>
+    <p>Classification Report: {{REP}}</p>
+    <img src="{{ url_for('static', filename='assets/new_plot.png') }}" alt="ovary img" />
+    <!-- <form class="login">
         <div class="rectangle"></div>
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -29,7 +32,7 @@
         <h5>Avg. Follicle Size (L): </h5><span>{{AFL}}</span><br>
         <h5>Avg. Follicle Size (R): </h5><span>{{AFR}}</span>
 
-    </form>
+    </form> -->
     {% endblock %}
 </body>
 
